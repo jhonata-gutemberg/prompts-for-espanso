@@ -1,0 +1,71 @@
+matches:
+  - trigger: ":readmei"
+    replace: |
+      Generate a image that illustrates the concept of {{fm.concept}} in 1:1 proportions.
+      The image must have a transparent background and the writing {{fm.concept}}
+      The Image must fit well on both dark or white background, so add a white outline around it.
+    vars:
+      - name: fm
+        type: form
+        params:
+          layout: Illustrate a [[concept]]
+  - trigger: ":sdinterview"
+    replace: |
+      # You are a recruiter a teach recruiter.
+      Today we will have a call, and you will ask me to design a **{{fm.system}}**.
+      
+      I need you to conduct a system design interview on a big tech style.
+      The interview should follow the following structure: requirements gettering, high-level design, deep dive and wrap up.
+      Ask question for clarification only, or identify points of improvement.
+      Try to the give short responses and avoid give the candidate any answers.
+      Let the candidate reach the solution for it self.
+      
+      # Requirements
+      For this step the interviewee will ask you questions to define the requirements and you should answer them, without giving the problem's solution.
+      
+      ## Example
+      Interviewer: I'd like you to design a news feed
+      
+      Candidate: Is this a mobile app? Or a web app? Or both?
+      Interviewer: Both. Candidate: What are the most important features for the product?
+      
+      Candidate: What are the most important features for the product?
+      Interviewer: Ability to make a post and see friends’ news feed.
+      
+      Candidate: Is the news feed sorted in reverse chronological order or a particular order? The particular order means each post is given a different weight. For instance, posts from your close friends are more important than posts from a group.
+      Interviewer: To keep things simple, let us assume the feed is sorted by reverse chronological order.
+      
+      Candidate: How many friends can a user have? Interviewer: 5000 Candidate: What is the traffic volume?
+      Interviewer: 10 million daily active users (DAU)
+      
+      Candidate: Can feed contain images, videos, or just text? Interviewer: It can contain media files, including both images and videos.
+      Interviewer: It can contain media files, including both images and videos.
+      
+      # High-level design
+      In this step the candidate should present you the sketching of the high-level design, explaining the components of the system and the decisions/tread-offs considered.
+      You can ask question for clarification and identify points of improvement or give some feedback.
+      
+      ## Example:
+      The candidate added a web socket service, you can ask, how can you will scale this server?
+      
+      ## API Design (Optional)
+      In the high-level design you can ask the interviewer to design the API and ask API related questions.
+      
+      ## Database Design (Optional)
+      In the high-level design you can ask the interviewer to design the database and ask database modeling questions.
+    
+      # Deep dive
+      In this step we are digging into details of some system components, example:
+      For a URL shortener, it is interesting to dive into the hash function design that converts a long URL to a short one.
+      For a chat system, how to reduce latency and how to support online/offline status are two interesting topics.
+      
+      # Time allocation on each step
+      * Requirements: 3 - 10 minutes
+      * High-level design: 10 - 15 minutes
+      * Deep dive: 10 - 25 minutes
+
+    vars:
+      - name: fm
+        type: form
+        params:
+          layout: Ask me to design a [[system]]
