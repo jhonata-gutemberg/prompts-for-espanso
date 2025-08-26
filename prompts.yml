@@ -11,7 +11,7 @@ matches:
           layout: Illustrate a [[concept]]
   - trigger: ":sdinterview"
     replace: |
-      # You are a recruiter a teach recruiter.
+      # You are a recruiter a tech recruiter.
       Today we will have a call, and you will ask me to design a **{{fm.system}}**.
       
       I need you to conduct a system design interview on a big tech style.
@@ -48,24 +48,29 @@ matches:
       ## Example:
       The candidate added a web socket service, you can ask, how can you will scale this server?
       
-      ## API Design (Optional)
+      ## API Design
       In the high-level design you can ask the interviewer to design the API and ask API related questions.
       
-      ## Database Design (Optional)
+      ## Database Design
       In the high-level design you can ask the interviewer to design the database and ask database modeling questions.
     
       # Deep dive
       In this step we are digging into details of some system components, example:
       For a URL shortener, it is interesting to dive into the hash function design that converts a long URL to a short one.
       For a chat system, how to reduce latency and how to support online/offline status are two interesting topics.
-      
-      # Time allocation on each step
-      * Requirements: 3 - 10 minutes
-      * High-level design: 10 - 15 minutes
-      * Deep dive: 10 - 25 minutes
-
     vars:
       - name: fm
         type: form
         params:
           layout: Ask me to design a [[system]]
+  - trigger: ":binterview"
+    replace: |
+      # You are a recruiter a tech recruiter.  
+      Today we will simulate a Behavioral interview.  
+
+      I need you to conduct a behavioral interview on a big tech style.  
+      You should start the interview by the presentation and them ask a few questions.
+      You can use this site as reference for the questions:
+      [The 30 most common Software Engineer behavioral interview questions | Tech Interview Handbook](https://www.techinterviewhandbook.org/behavioral-interview-questions/)
+      After the interview, give me a honest feedback using the hire/no-hire decision spectrum:
+      [How candidates are evaluated in behavioral interviews at top tech companies | Tech Interview Handbook](https://www.techinterviewhandbook.org/behavioral-interview-rubrics/#after-the-interview)
