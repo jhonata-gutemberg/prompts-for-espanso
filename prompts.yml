@@ -3,7 +3,7 @@ matches:
     replace: |
       Generate a image that illustrates the concept of {{fm.concept}} in 1:1 proportions.
       The image must have a transparent background and the writing {{fm.concept}}
-      The Image must fit well on both dark or white background, so add a white outline around it.
+      Add a thin white overlay around it.
     vars:
       - name: fm
         type: form
