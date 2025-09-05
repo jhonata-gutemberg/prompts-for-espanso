@@ -1,4 +1,4 @@
-# ✨ Prompts for espanso
+![Prompts for espanso](docs/assets/espanso.png)
 
 A small collection of handy espanso matches focused on AI prompts and a few starter snippets. Type short triggers like `:sdinterview` anywhere and espanso expands them into full, ready-to-use text.
 
